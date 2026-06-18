@@ -1,0 +1,789 @@
+html,body{
+    overflow-x:hidden;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:"Microsoft JhengHei",sans-serif;
+
+    background:
+    radial-gradient(circle at top left,#ffdbe8,transparent 35%),
+    radial-gradient(circle at bottom right,#e8ddff,transparent 35%),
+    linear-gradient(135deg,#fff7fa,#f8efff);
+
+    min-height:100vh;
+    color:#333;
+}
+
+.page{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding:40px 20px;
+
+    overflow:hidden;
+}
+
+.container{
+
+    width:min(100%, 920px);
+
+    background:rgba(255,255,255,0.92);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:30px;
+
+    padding:50px;
+
+    box-shadow:
+    0 20px 50px rgba(192,90,140,0.18);
+
+    border:
+    1px solid rgba(255,255,255,0.7);
+}
+
+.badge{
+    width:fit-content;
+
+    margin:0 auto 20px;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:#fff0f6;
+
+    color:#c94f7c;
+
+    font-size:14px;
+    font-weight:bold;
+}
+
+h1{
+    text-align:center;
+
+    margin:0 0 18px;
+
+    font-size:38px;
+
+    color:#bb3d72;
+
+    letter-spacing:1px;
+}
+
+.subtitle{
+    max-width:720px;
+
+    margin:0 auto 40px;
+
+    text-align:center;
+
+    line-height:1.9;
+
+    color:#666;
+
+    font-size:16px;
+}
+
+.feature-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:18px;
+
+    margin-bottom:40px;
+}
+
+.feature-card{
+    background:#fff8fb;
+
+    border-radius:22px;
+
+    padding:24px;
+
+    text-align:center;
+
+    border:1px solid #f4c6d8;
+
+    transition:0.25s;
+}
+
+.feature-card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 10px 25px rgba(212,98,148,0.15);
+}
+
+.feature-card span{
+    display:block;
+
+    font-size:32px;
+
+    margin-bottom:10px;
+}
+
+.feature-card h3{
+    margin:0 0 10px;
+
+    color:#b44d77;
+}
+
+.feature-card p{
+    margin:0;
+
+    color:#777;
+
+    line-height:1.7;
+
+    font-size:14px;
+}
+
+.upload-box{
+    background:
+    linear-gradient(
+        135deg,
+        #fff8fb,
+        #ffffff
+    );
+
+    border:
+    2px dashed #dfaac2;
+
+    border-radius:24px;
+
+    padding:38px;
+
+    text-align:center;
+}
+
+.upload-box label{
+    display:block;
+
+    margin-bottom:12px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    color:#444;
+}
+
+.upload-desc{
+    max-width:620px;
+
+    margin:0 auto 18px;
+
+    color:#777;
+
+    line-height:1.7;
+
+    font-size:14px;
+}
+
+.tips-box{
+    margin:20px 0 24px;
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+
+    gap:12px;
+}
+
+.tip-item{
+    background:#fff0f6;
+
+    color:#c94f7c;
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    border:1px solid #ffd3e3;
+}
+
+input[type="file"]{
+    width:100%;
+
+    max-width:450px;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    border:
+    1px solid #e7bfd1;
+
+    background:#fff;
+
+    cursor:pointer;
+}
+
+#preview-container{
+    margin-top:25px;
+
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    justify-content:center;
+}
+
+.preview-image{
+    width:120px;
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    border:3px solid #ffd6e6;
+
+    box-shadow:
+    0 8px 18px rgba(0,0,0,0.12);
+}
+
+button{
+    margin-top:25px;
+
+    width:100%;
+
+    max-width:450px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #d76091,
+        #b94a95
+    );
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.25s;
+
+    box-shadow:
+    0 12px 25px rgba(201,79,124,0.28);
+}
+
+button:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 16px 32px rgba(201,79,124,0.36);
+}
+
+.notice{
+    margin-top:22px;
+
+    text-align:center;
+
+    font-size:13px;
+
+    line-height:1.8;
+
+    color:#888;
+}
+
+.result-container{
+    max-width:1000px;
+}
+
+.result{
+    margin-top:30px;
+
+    background:#fff8fb;
+
+    border-left:
+    8px solid #d76091;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    line-height:2;
+
+    white-space:pre-line;
+
+    font-size:16px;
+
+    color:#333;
+
+    box-shadow:
+    inset 0 0 0 1px #f4cbda;
+}
+
+.back{
+    display:block;
+
+    width:fit-content;
+
+    margin:35px auto 0;
+
+    padding:14px 26px;
+
+    border-radius:999px;
+
+    background:#fff0f6;
+
+    color:#c94f7c;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:0.2s;
+}
+
+.back:hover{
+    background:#ffe4ef;
+}
+
+@media(max-width:768px){
+
+    .container{
+        padding:32px 22px;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    .feature-grid{
+        grid-template-columns:1fr;
+    }
+
+    .upload-box{
+        padding:28px 18px;
+    }
+
+    .preview-image{
+        width:95px;
+        height:95px;
+    }
+
+}
+
+.result-card-wrapper{
+    margin-top:35px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap: 15px; /* 原本是 22px，改小讓卡片更緊湊 */
+}
+
+.analysis-card{
+    background:#ffffff;
+    border-radius:24px;
+    padding: 22px 26px; /* 原本是 30px，縮小卡片四周的留白 */
+    box-shadow: 0 12px 30px rgba(190,80,130,0.13);
+    border:1px solid #f3c5d8;
+    position:relative;
+    overflow:hidden;
+}
+
+.analysis-card::before{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:8px;
+    height:100%;
+
+    background:
+    linear-gradient(
+        180deg,
+        #d76091,
+        #b94a95
+    );
+}
+
+.analysis-card h2{
+    margin: 0 0 10px; /* 原本底下留白是 18px，縮小與內文的距離 */
+    color:#b93f72;
+    font-size:24px;
+    padding-left:8px;
+}
+
+.card-content{
+    line-height: 1.6; /* 原本是 2，改為 1.6 讓行距變緊密 */
+    color:#444;
+    font-size:16px;
+    white-space:pre-line;
+}
+
+.card-content br{
+    line-height: 1.6; /* 配合上面的行距調整 */
+}
+
+@media(max-width:768px){
+    .analysis-card{
+        padding:24px 20px;
+    }
+
+    .analysis-card h2{
+        font-size:21px;
+    }
+
+    .card-content{
+        font-size:15px;
+    }
+}
+
+/* ===== Loading Screen ===== */
+
+#loading-screen{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    background:
+    rgba(255,255,255,0.92);
+
+    backdrop-filter:blur(10px);
+
+    z-index:9999;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+}
+
+.loading-box{
+
+    width:90%;
+    max-width:420px;
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:40px 32px;
+
+    text-align:center;
+
+    box-shadow:
+    0 20px 50px rgba(190,80,130,0.18);
+
+    border:1px solid #f3c5d8;
+}
+
+.loader{
+
+    width:80px;
+    height:80px;
+
+    margin:0 auto 24px;
+
+    border-radius:50%;
+
+    border:8px solid #ffd9e8;
+
+    border-top:
+    8px solid #d76091;
+
+    animation:spin 1s linear infinite;
+}
+
+.loading-box h2{
+
+    margin:0 0 14px;
+
+    color:#b93f72;
+
+    font-size:28px;
+}
+
+.loading-box p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:28px;
+
+    min-height:50px;
+}
+
+.loading-bar{
+
+    width:100%;
+
+    height:12px;
+
+    background:#ffe8f1;
+
+    border-radius:999px;
+
+    overflow:hidden;
+}
+
+.loading-progress{
+
+    width:40%;
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #d76091,
+        #b94a95
+    );
+
+    animation:loadingMove 1.5s infinite;
+}
+
+@keyframes spin{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes loadingMove{
+
+    0%{
+        transform:translateX(-120%);
+    }
+
+    100%{
+        transform:translateX(120%);
+    }
+}
+
+/* ===== 色票卡與導購按鈕 ===== */
+
+/* ===== 色票卡與導購按鈕 ===== */
+
+.swatch-container {
+    display: flex;
+    flex-wrap: nowrap; /* 強制不換行，五個並排 */
+    gap: 12px; /* 縮小卡片之間的間距 */
+    margin-top: 24px;
+    justify-content: center;
+    align-items: flex-start;
+    /* 已經刪除 overflow-x: auto; 徹底消滅拉軸 */
+    width: 100%;
+}
+
+.swatch-card {
+    flex: 1; /* 關鍵魔法：讓 5 個卡片自動均分可用寬度 */
+    min-width: 0; /* 防止文字過長撐爆卡片 */
+    max-width: 140px; /* 限制最大寬度，讓它看起來是「窄版」的 */
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 12px; /* 縮小內部的留白 */
+    text-align: center;
+    border: 1px solid #f0d8e3;
+    box-shadow: 0 8px 22px rgba(210,120,160,0.08);
+    transition: 0.25s;
+}
+
+.swatch-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(210,120,160,0.15);
+}
+
+.swatch-color {
+    width: 100%;
+    height: 75px; /* 縮小高度，讓色塊比例更好看 */
+    border-radius: 14px;
+    margin-bottom: 12px;
+}
+
+.swatch-label {
+    font-size: 14px; /* 字體微調 */
+    color: #666;
+    line-height: 1.6;
+    word-break: break-word; /* 確保長色碼會自動換行 */
+}
+
+.buy-link{
+
+    display:inline-block;
+
+    background:#fff0f6;
+
+    color:#d76091;
+
+    padding:8px 14px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    margin-top:10px;
+
+    border:1px solid #f4c6d8;
+
+    transition:0.25s;
+}
+
+.buy-link:hover{
+
+    background:#d76091;
+
+    color:white;
+}
+
+.price-tag{
+
+    color:#b93f72;
+
+    font-weight:bold;
+
+    font-size:15px;
+
+    padding:0 4px;
+}
+
+/* ===== 分析卡片 ===== */
+
+.analysis-card{
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:34px;
+
+    margin-bottom:28px;
+
+    border:
+    1px solid #f4d3e2;
+
+    box-shadow:
+    0 10px 30px rgba(210,120,160,0.08);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.analysis-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:8px;
+    height:100%;
+
+    background:
+    linear-gradient(
+        180deg,
+        #d76091,
+        #b94a95
+    );
+}
+
+.analysis-card h2{
+
+    margin:0 0 18px;
+
+    color:#b93f72;
+
+    font-size:30px;
+
+    padding-left:10px;
+}
+
+.card-content{
+
+    line-height:1.8;
+
+    color:#555;
+
+    font-size:17px;
+
+    white-space:pre-line;
+}
+
+/* ===== 手機版 ===== */
+@media(max-width:768px){
+
+    .analysis-card {
+        padding: 26px 20px;
+    }
+
+    .analysis-card h2 {
+        font-size: 24px;
+    }
+
+    .card-content {
+        font-size: 15px;
+    }
+
+    /* 以下是修正手機版 5 個並排的精緻度 */
+    .swatch-container {
+        gap: 6px; /* 手機版間距縮到最小 */
+    }
+
+    .swatch-card {
+        padding: 8px; /* 手機版內部留白縮小 */
+        border-radius: 14px;
+    }
+
+    .swatch-color {
+        height: 50px; /* 手機版色塊高度壓扁 */
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+    
+    .swatch-label {
+        font-size: 11px; /* 字體再縮小一點，確保塞得下 */
+    }
+}
